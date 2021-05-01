@@ -25,7 +25,7 @@
         }
 
         function getAll(){
-            var url = "/booking-app/bookings/all";
+            var url = "/HotelBooking/bookings/all";
             var bookingsPromise = $http.get(url);
             bookingsPromise.then(function(response){
                 vm.bookings = response.data;
@@ -33,7 +33,7 @@
         }
 
         function getAffordable(){
-            var url = "/booking-app/bookings/affordable/" + 100;
+            var url = "/HotelBooking/bookings/affordable/" + 100;
             var bookingsPromise = $http.get(url);
             bookingsPromise.then(function(response){
                 vm.bookings = response.data;
@@ -41,14 +41,14 @@
         }
 
         function deleteBooking(id){
-            var url = "/booking-app/bookings/delete/" + id;
+            var url = "/HotelBooking/bookings/delete/" + id;
             $http.post(url).then(function(response){
                 vm.bookings = response.data;
             });
         }
 
         function create(){
-            var url = "/booking-app/bookings/create";
+            var url = "/HotelBooking/bookings/create";
 
             var booking = {
                 pricePerNight:300,
