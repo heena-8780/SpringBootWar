@@ -18,10 +18,10 @@ public class DatabaseSeeder implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         List<HotelBooking> bookings = new ArrayList<>();
 
-        bookings.add(new HotelBooking("Marriot", 200.50, 3));
-        bookings.add(new HotelBooking("Ibis", 90, 4));
-        bookings.add(new HotelBooking("Novotel", 140.74, 1));
-        bookings.add(new HotelBooking("Novotel", 140.74, 1));
+        bookings.add(new HotelBooking("Heena", 200.50, 3));
+        bookings.add(new HotelBooking("Niha", 90, 4));
+        bookings.add(new HotelBooking("Mihir", 140.74, 1));
+        bookings.add(new HotelBooking("John", 87, 2));
 
         bookingRepository.save(bookings);
     }
